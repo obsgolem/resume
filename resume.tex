@@ -1,0 +1,103 @@
+% \title{Josiah Bills's Resume}
+% \author{Josiah Bills}
+% \date{\today}
+
+\documentclass[10pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend}
+
+\usepackage[margin=0.4in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\usepackage{hyperref}
+\urlstyle{same}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\setlength\parindent{24pt}
+
+\begin{document}
+
+   \begin{center}
+      \begin{tabular}{ R{2.7in}|L{2.7in} } 
+         \multicolumn{2}{c}{\textbf{\Large{Josiah Bills}}} \\[1mm]
+         \multicolumn{2}{c}{2381 Duncan Dr Apt 3, Fairborn OH, 45324} \\[1mm]
+         681-302-0666 (Personal) & 937-296-4768 (Work) \\[1mm] 
+         Josiah@adoniram.net (Personal) & Josiah.Bills@radiancetech.com (Work) \\[1mm] 
+         \url{https://github.com/obsgolem} & \url{https://www.linkedin.com/in/josiahebills/}
+      \end{tabular}
+   \end{center}
+
+   \noindent \textbf{\large{Education}} \\
+   \indent Bachelors of Science from Cedarville University (Minor in Math)
+   
+   \noindent \textbf{\large{Skills}}
+   
+   \indent \textbf{Programming Languages}
+   \begin{addmargin}[48pt]{0pt}
+   (Proficient) C++, C, LLVM IR \\
+   (Familiar) HTML, CSS, Javascript, PHP, SQL, Swift, Objective C, x86/x86-64 ASM, Matlab, Java, C\#, Python, Ruby, Go
+   \end{addmargin}
+   
+   \indent \textbf{Technologies}
+   \begin{addmargin}[48pt]{0pt}
+   LLVM, Mac OS X, Linux, Windows, Air Force HPC, Git, Mysql, Sqlite, MSSQL, 
+   OpenGl, IOS / Mac OS development, JSON, REST, Node.js, AFSIM
+   \end{addmargin}
+   
+   \indent \textbf{General programming skills}
+   \begin{addmargin}[48pt]{0pt}
+   Compiler development and programming language design, Graphics programming, 
+   Low level programming, Client side web programming, Object Oriented Design, 
+   Modeling and Simulation development
+   \end{addmargin}
+
+   \noindent \textbf{\large{Experience}}
+   \begin{itemize}
+       \item[] \textbf{Modeling and Simulation developer, Radiance Technologies \hfill Fall 2018-Present}
+       \item[] \begin{itemize}
+           \item Supporting AFRL in the integration of MATLAB models into the AFSIM framework
+           \item Providing help desk and maintenance support for AFSIM users
+           \item TS clearance
+       \end{itemize}
+       \item[] \textbf{HPC Developer, Applied Research Solutions \hfill Summer 2018}
+       \item[] \begin{itemize}
+           \item Implemented methods for doing laser simulations on the Air Force HPC
+           \item Worked with experts at the AFIT Center for Directed Energy to develop models
+       \end{itemize}
+       \item[] \textbf{Cedarville University Senior Design Team \hfill Fall 2017-Spring 2018}
+       \item[] \begin{itemize}
+           \item Helped to design the payload for an educational remote access trojan
+           \item Designed a framework for loading and unloading exploits
+           \item Implemented privilege escalation exploits
+           \item Advised team on Mac OS X development
+       \end{itemize}
+       \item[] \textbf{Subcontractor, Design Software LLC \hfill Summer 2017}
+       \item[] \begin{itemize}
+           \item Designed a preview and export tool for schematics of buildings
+           \item Researched Google Sketchup, Google Layout, and DXF apis, and helped guide the decision as to which should be used
+       \end{itemize}
+       \item[] \textbf{Volunteer, LightSys Code-a-Thon \hfill Spring 2017}
+       \item[] \begin{itemize}
+           \item Worked with a team of programmers to redesign a website in 5 days
+           \item Made use of scrum practices
+           \item Made use of a LAMP stack
+       \end{itemize}
+   \end{itemize}
+   
+   \noindent \textbf{\large{Personal Projects}}
+   \begin{itemize}
+       \item[] \textbf{JL Programming Language}
+       \item[] \begin{itemize}
+           \item Designed a fully featured C-like language
+           \item Developed a solution to a complex circular dependency problem
+           \item Developed a full compiler for the language, complete with compile time code execution and code generation with LLVM
+       \end{itemize}
+   \end{itemize}
+\end{document}
