@@ -1,103 +1,161 @@
-% \title{Josiah Bills's Resume}
-% \author{Josiah Bills}
-% \date{\today}
-
-\documentclass[10pt]{letter}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{scrextend}
-
 \usepackage[margin=0.4in]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
 
 \usepackage{hyperref}
 \urlstyle{same}
+\hypersetup{
+    colorlinks = true, % Disable the ugly boxes
+    urlcolor = blue, 
+    linkcolor = blue, 
+    citecolor = red 
+}
 
 \usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
-\setlength\parindent{24pt}
+% Misc packages
+\usepackage{paracol}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{nopageno}
+
+\usepackage[nobottomtitles*]{titlesec}
+\titleformat{\section}[hang]{\LARGE\bfseries}{}{0pt}{}[\titlerule]
+
+% Command to make it easier to add work experiences
+
+\newcommand{\workexpheader}[3]{
+    \rightline{\small \textit{#1}}
+    \vspace{2pt}
+    {
+        \Large #2 \\
+        \large \textbf{\textit{#3}}
+    }
+}
+
+% Disable parindent
+\setlength\parindent{0pt}
 
 \begin{document}
+    \begin{paracol}{2}
+        \parbox[top][0.08\textheight][c]{\linewidth}{
+            \textbf{\Huge{Josiah Bills}}
+        }
+        
+        \switchcolumn
+        
+        \parbox[top][0.08\textheight][c]{\linewidth}{
+            \begin{mdframed}[hidealllines=true,backgroundcolor=gray!20]
+                \begin{itemize}[noitemsep]
+                    \item[] 3163 Clubhouse Dr Apt 4, Beavercreek OH, 45431
+                    \item[] 681-302-0666
+                    \item[] \href{mailto://Josiah@adoniram.net}{josiah@adoniram.net}
+                    \item[] \url{https://www.linkedin.com/in/josiahebills/}
+                    \item[] \url{https://github.com/obsgolem}
+                \end{itemize}
+            \end{mdframed}
+        }
+        
+        \switchcolumn
 
-   \begin{center}
-      \begin{tabular}{ R{2.7in}|L{2.7in} } 
-         \multicolumn{2}{c}{\textbf{\Large{Josiah Bills}}} \\[1mm]
-         \multicolumn{2}{c}{2381 Duncan Dr Apt 3, Fairborn OH, 45324} \\[1mm]
-         681-302-0666 (Personal) & 937-296-4768 (Work) \\[1mm] 
-         Josiah@adoniram.net (Personal) & Josiah.Bills@radiancetech.com (Work) \\[1mm] 
-         \url{https://github.com/obsgolem} & \url{https://www.linkedin.com/in/josiahebills/}
-      \end{tabular}
-   \end{center}
+        \section*{Education}
+        \parbox[top][][c]{\linewidth}{
+            Bachelors of Science in Computer Science \\
+            Minor in Math \\
+            Cedarville University 
+        }
+        
+        \section*{Skills}
 
-   \noindent \textbf{\large{Education}} \\
-   \indent Bachelors of Science from Cedarville University (Minor in Math)
-   
-   \noindent \textbf{\large{Skills}}
-   
-   \indent \textbf{Programming Languages}
-   \begin{addmargin}[48pt]{0pt}
-   (Proficient) C++, C, LLVM IR \\
-   (Familiar) HTML, CSS, Javascript, PHP, SQL, Swift, Objective C, x86/x86-64 ASM, Matlab, Java, C\#, Python, Ruby, Go
-   \end{addmargin}
-   
-   \indent \textbf{Technologies}
-   \begin{addmargin}[48pt]{0pt}
-   LLVM, Mac OS X, Linux, Windows, Air Force HPC, Git, Mysql, Sqlite, MSSQL, 
-   OpenGl, IOS / Mac OS development, JSON, REST, Node.js, AFSIM
-   \end{addmargin}
-   
-   \indent \textbf{General programming skills}
-   \begin{addmargin}[48pt]{0pt}
-   Compiler development and programming language design, Graphics programming, 
-   Low level programming, Client side web programming, Object Oriented Design, 
-   Modeling and Simulation development
-   \end{addmargin}
+        \parbox[top][][c]{\linewidth}{
+            \begin{center}
+                \textbf{Selected Programming Languages}
+            \end{center}
+            \begin{tabularx}{\linewidth}{YY}
+                C++ & C \\
+                CMake & C\# \\
+                LLVM IR & x86/x86-64 ASM \\
+                Python & Julia \\
+                PHP & Java \\
+                Javascript & HTML \\
+                CSS & Go \\
+                Matlab & Simulink
+            \end{tabularx}
+            
+            \begin{center}
+                \textbf{Selected Technologies}
+            \end{center}
+            \begin{tabularx}{\linewidth}{YY}
+                AFSIM & Dakota \\
+                Air Force HPC & HDF5 \\
+                LLVM & Git \\
+                OpenGL & SQL 
+            \end{tabularx}
+            
+            \medskip
+            
+            Informally self taught in pure mathematics, especially abstract algebra,
+            category theory, and type theory.
+        }
 
-   \noindent \textbf{\large{Experience}}
-   \begin{itemize}
-       \item[] \textbf{Modeling and Simulation developer, Radiance Technologies \hfill Fall 2018-Present}
-       \item[] \begin{itemize}
-           \item Supporting AFRL in the integration of MATLAB models into the AFSIM framework
-           \item Providing help desk and maintenance support for AFSIM users
-           \item TS clearance
-       \end{itemize}
-       \item[] \textbf{HPC Developer, Applied Research Solutions \hfill Summer 2018}
-       \item[] \begin{itemize}
-           \item Implemented methods for doing laser simulations on the Air Force HPC
-           \item Worked with experts at the AFIT Center for Directed Energy to develop models
-       \end{itemize}
-       \item[] \textbf{Cedarville University Senior Design Team \hfill Fall 2017-Spring 2018}
-       \item[] \begin{itemize}
-           \item Helped to design the payload for an educational remote access trojan
-           \item Designed a framework for loading and unloading exploits
-           \item Implemented privilege escalation exploits
-           \item Advised team on Mac OS X development
-       \end{itemize}
-       \item[] \textbf{Subcontractor, Design Software LLC \hfill Summer 2017}
-       \item[] \begin{itemize}
-           \item Designed a preview and export tool for schematics of buildings
-           \item Researched Google Sketchup, Google Layout, and DXF apis, and helped guide the decision as to which should be used
-       \end{itemize}
-       \item[] \textbf{Volunteer, LightSys Code-a-Thon \hfill Spring 2017}
-       \item[] \begin{itemize}
-           \item Worked with a team of programmers to redesign a website in 5 days
-           \item Made use of scrum practices
-           \item Made use of a LAMP stack
-       \end{itemize}
-   \end{itemize}
-   
-   \noindent \textbf{\large{Personal Projects}}
-   \begin{itemize}
-       \item[] \textbf{JL Programming Language}
-       \item[] \begin{itemize}
-           \item Designed a fully featured C-like language
-           \item Developed a solution to a complex circular dependency problem
-           \item Developed a full compiler for the language, complete with compile time code execution and code generation with LLVM
-       \end{itemize}
-   \end{itemize}
+        \section*{Personal Projects}
+        \parbox[top][][c]{\linewidth}{
+            \begin{itemize}
+                \item[] \textbf{JL Programming Language}
+                \item[] \begin{itemize}
+                    \item Designed a fully featured C-like language
+                    \item Developed a solution to a complex circular dependency problem
+                    \item Developed a full compiler for the language, complete with compile time code execution and code generation with LLVM
+                \end{itemize}
+                \item[] \textbf{Algebraic Geometry Class}
+                \item[] \begin{itemize}
+                    \item Taking a free online graduate level course on scheme theory
+                    \item Taught by a Stanford Professor
+                \end{itemize}
+            \end{itemize}
+        }
+
+        \switchcolumn
+
+        \section*{Experience}
+
+        \workexpheader{Fall 2018-Present}{Modeling and Simulation developer}{Radiance Technologies}
+        \begin{itemize}[noitemsep]
+            \item Supporting AFRL in the integration of MATLAB models into the AFSIM framework
+            \item Providing help desk and maintenance support for AFSIM users
+            \item Performing satellite constellation trade analysis
+            \item TS clearance
+        \end{itemize}
+
+        \workexpheader{Summer 2018}{HPC Developer}{Applied Research Solutions}
+        \begin{itemize}[noitemsep]
+            \item Implemented methods for doing laser simulations on the Air Force HPC
+            \item Worked with experts at the AFIT Center for Directed Energy to develop models
+        \end{itemize}
+
+        \workexpheader{Fall 2017-Spring 2018}{Cedarville University Senior Design Team}{Cedarville University}
+        \begin{itemize}[noitemsep]
+            \item Helped to design the payload for an educational remote access trojan
+            \item Designed a framework for loading and unloading exploits
+            \item Implemented privilege escalation exploits
+            \item Advised team on Mac OS X development
+        \end{itemize}
+
+        \workexpheader{Summer 2017}{Software Developer Subcontractor}{Design Software LLC}
+        \begin{itemize}[noitemsep]
+            \item Designed a preview and export tool for schematics of buildings
+            \item Researched Google Sketchup, Google Layout, and DXF apis.
+        \end{itemize}
+
+        \workexpheader{Spring 2017}{Volunteer Software Developer}{LightSys Code-a-Thon}
+        \begin{itemize}[noitemsep]
+            \item Worked with a team of programmers to redesign a website in 5 days
+            \item Made use of a LAMP stack
+        \end{itemize}
+    \end{paracol}
 \end{document}
