@@ -27,6 +27,9 @@
 \usepackage[nobottomtitles*]{titlesec}
 \titleformat{\section}[hang]{\LARGE\bfseries}{}{0pt}{}[\titlerule]
 
+% Disable acronym hyphenation
+\uchyph=0
+
 % Command to make it easier to add work experiences
 
 \newcommand{\workexpheader}[3]{
@@ -52,7 +55,7 @@
     \parbox[top][0.08\textheight][c]{\linewidth}{
         \begin{mdframed}[hidealllines=true,backgroundcolor=gray!20]
             \begin{itemize}[noitemsep]
-                \item[] 3163 Clubhouse Dr Apt 4, Beavercreek OH, 45431
+                \item[] 3421 Fairwood Dr, Beavercreek OH, 45432
                 \item[] 681-302-0666
                 \item[] \href{mailto://Josiah@adoniram.net}{josiah@adoniram.net}
                 \item[] \url{https://www.linkedin.com/in/josiahebills/}
@@ -91,16 +94,19 @@
             \textbf{Selected Technologies}
         \end{center}
         \begin{tabularx}{\linewidth}{YY}
-            AFSIM         & Dakota \\
-            Air Force HPC & HDF5   \\
-            LLVM          & Git    \\
-            OpenGL        & SQL
+            AFSIM                   & Dakota \\
+            Air Force HPC           & HDF5   \\
+            LLVM                    & Git    \\
+            OpenGL                  & SQL    \\
+            GDB           \& Cppdbg & LSP
         \end{tabularx}
 
         \medskip
 
         Informally self taught in pure mathematics, especially abstract algebra,
         category theory, and type theory.
+
+        Intermediate reading and speaking knowledge of Ancient Greek.
     }
 
     \section*{Personal Projects}
@@ -126,7 +132,11 @@
 
     \workexpheader{Fall 2018-Present}{Lead Modeling and Simulation Developer}{Radiance Technologies}
     \begin{itemize}[noitemsep]
-        \item Acted as solutions architect for the Cyber/EW team on AFSIM team-of-teams development effort
+        \item Acted as solutions architect for various teams on the \\ AFSIM team-of-teams development effort
+        \item Developed a package manager for AFSIM
+        \item Developed a VSCode plugin for AFSIM, including custom parser
+        \item Designed and led development refactors of various subsystems of AFSIM, including RF sensors and Cyber
+        \item Integrated missile, airframe, and sensor models, including both C++ and Simulink models, into AFSIM
         \item Led a team of software engineers in the development and sustainment of the AFSIM product
         \item Providing help desk and support for AFSIM users
         \item Supported AFRL in the creation of a space-based GMTI model in AFSIM
